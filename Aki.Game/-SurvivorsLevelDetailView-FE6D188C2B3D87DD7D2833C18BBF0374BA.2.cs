@@ -1,0 +1,16 @@
+﻿using System;
+
+// Token: 0x02002B3D RID: 11069
+internal enum <SurvivorsLevelDetailView>FE6D188C2B3D87DD7D2833C18BBF0374BAECB58F4BBBC46C24D048BE1533D47DD__ERoleHead
+{
+	// Token: 0x0400AB2C RID: 43820
+	BtnCommon,
+	// Token: 0x0400AB2D RID: 43821
+	TexRole,
+	// Token: 0x0400AB2E RID: 43822
+	SprUp,
+	// Token: 0x0400AB2F RID: 43823
+	TxtLv,
+	// Token: 0x0400AB30 RID: 43824
+	TxtName
+}

@@ -1,0 +1,12 @@
+﻿using System;
+
+// Token: 0x02001013 RID: 4115
+internal enum <GolemHackingCodeKeyListItem>F158C8247F0C88C37AF303F367744CE2DC0F554FE54A33C168B0A5E8BD13EAF00__EKey
+{
+	// Token: 0x040030A9 RID: 12457
+	PanelHightLight,
+	// Token: 0x040030AA RID: 12458
+	TxtKeyCode,
+	// Token: 0x040030AB RID: 12459
+	Btn
+}

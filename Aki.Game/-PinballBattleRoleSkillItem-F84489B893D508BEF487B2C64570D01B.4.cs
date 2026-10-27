@@ -1,0 +1,10 @@
+﻿using System;
+
+// Token: 0x02001CF5 RID: 7413
+internal enum <PinballBattleRoleSkillItem>F84489B893D508BEF487B2C64570D01B6752BE307C8FE69A23023DDF42E28A491__EBuffItem
+{
+	// Token: 0x040067AD RID: 26541
+	Sprite,
+	// Token: 0x040067AE RID: 26542
+	Count
+}

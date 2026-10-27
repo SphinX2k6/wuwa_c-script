@@ -1,0 +1,51 @@
+﻿using System;
+using System.Runtime.CompilerServices;
+using Aki.UniverseEditor.Interface.Fbs.Condition;
+using Google.FlatBuffers;
+
+namespace Aki.UniverseEditor.Interface.Fbs.Quest
+{
+	// Token: 0x02004123 RID: 16675
+	public static class IShowUiConditionVerify
+	{
+		// Token: 0x060186CD RID: 100045 RVA: 0x00385E04 File Offset: 0x00384004
+		public static bool Verify(Verifier verifier, uint tablePos)
+		{
+			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 1UL, 1UL, false))
+			{
+				short offsetId = 6;
+				VerifyTableAction verifyAction;
+				if ((verifyAction = IShowUiConditionVerify.<>O.<0>__Verify) == null)
+				{
+					verifyAction = (IShowUiConditionVerify.<>O.<0>__Verify = new VerifyTableAction(IConditionGroupVerify.Verify));
+				}
+				if (verifier.VerifyTable(tablePos, offsetId, verifyAction, false) && verifier.VerifyField(tablePos, 8, 1UL, 1UL, false))
+				{
+					short typeIdVOffset = 8;
+					short valueVOffset = 10;
+					VerifyUnionAction verifyAction2;
+					if ((verifyAction2 = IShowUiConditionVerify.<>O.<1>__Verify) == null)
+					{
+						verifyAction2 = (IShowUiConditionVerify.<>O.<1>__Verify = new VerifyUnionAction(TShowUiVerify.Verify));
+					}
+					if (verifier.VerifyUnion(tablePos, typeIdVOffset, valueVOffset, verifyAction2, false) && verifier.VerifyField(tablePos, 12, 1UL, 1UL, false) && verifier.VerifyField(tablePos, 14, 1UL, 1UL, false))
+					{
+						return verifier.VerifyTableEnd(tablePos);
+					}
+				}
+			}
+			return false;
+		}
+
+		// Token: 0x02007954 RID: 31060
+		[CompilerGenerated]
+		private static class <>O
+		{
+			// Token: 0x0401329E RID: 78494
+			public static VerifyTableAction <0>__Verify;
+
+			// Token: 0x0401329F RID: 78495
+			public static VerifyUnionAction <1>__Verify;
+		}
+	}
+}

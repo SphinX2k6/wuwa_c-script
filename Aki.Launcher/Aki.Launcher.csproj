@@ -1,0 +1,729 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{37600991-511A-49CC-9A91-B04AB32BBB5F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aki.Launcher</RootNamespace>
+    <AssemblyName>Aki.Launcher</AssemblyName>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Google.FlatBuffers">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\Google.FlatBuffers.dll</HintPath>
+    </Reference>
+    <Reference Include="Sharphereal.Core">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\Sharphereal.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Sharphereal.ThirdParty.UniTask">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\Sharphereal.ThirdParty.UniTask.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.StackTrace">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Diagnostics.StackTrace.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Runtime.InteropServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Numerics">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Runtime.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Text.RegularExpressions.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\UniTask.dll</HintPath>
+    </Reference>
+    <Reference Include="UnrealEngine">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\UnrealEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="--A{00000003}.cs" />
+    <Compile Include="--y__InlineArray2.cs" />
+    <Compile Include="--y__InlineArray3.cs" />
+    <Compile Include="--y__InlineArray4.cs" />
+    <Compile Include="--y__InlineArray5.cs" />
+    <Compile Include="--y__InlineArray6.cs" />
+    <Compile Include="--y__InlineArray7.cs" />
+    <Compile Include="-Module-.cs" />
+    <Compile Include="AkiClient\Game\Aki\Core\BP_MainGameInstance_C.cs" />
+    <Compile Include="AkiClient\Game\Aki\HotPatch\OnAnyKeyPressCallback.cs" />
+    <Compile Include="AkiClient\Game\Aki\HotPatch\OnAxisCallback.cs" />
+    <Compile Include="AkiClient\Game\Aki\HotPatch\OnPressActionCallback.cs" />
+    <Compile Include="AkiClient\Game\Aki\HotPatch\OnTouchActionCallback.cs" />
+    <Compile Include="AkiClient\Game\Aki\HotPatch\OnTouchMovedActionCallback.cs" />
+    <Compile Include="AkiClient\Game\Aki\HotPatch\SHotPatchGamepad.cs" />
+    <Compile Include="AkiClient\Game\Aki\HotPatch\Splash\Splash.cs" />
+    <Compile Include="AkiClient\Game\Aki\HotPatch\TsHotFixActionHandle_C.cs" />
+    <Compile Include="AkiClient\Game\Aki\UI\Module\HotFix\HotFixLGUIEventSystemActor_C.cs" />
+    <Compile Include="AkiClient\Game\Aki\UI\Module\HotFix\OnClickKey.cs" />
+    <Compile Include="AkiClient\Game\Aki\UI\Module\HotFix\OnMiddleMouseScroll.cs" />
+    <Compile Include="AkiClient\Game\Aki\UI\Module\HotFix\OnTouch.cs" />
+    <Compile Include="AkiClient\Game\Aki\UI\Module\HotFix\OnTouchMove.cs" />
+    <Compile Include="ConsoleManagerGenerate\ConsoleRegister.cs" />
+    <Compile Include="CSharpScript\Core\Common\EnumExtensionsAttribute.cs" />
+    <Compile Include="CSharpScript\Core\Common\EnumStringMemberAttribute.cs" />
+    <Compile Include="CSharpScript\Core\Net\GatewayLatencyConfigVo.cs" />
+    <Compile Include="CSharpScript\Core\Net\NetHostInfo.cs" />
+    <Compile Include="CSharpScript\Core\Net\NetHostInfoExtensions.cs" />
+    <Compile Include="CSharpScript\Game\Module\Launcher\Action\ESubPackageDownLoadMobileClearItemType.cs" />
+    <Compile Include="CSharpScript\Game\Module\Launcher\Action\ESubPackageDownLoadPackageType.cs" />
+    <Compile Include="CSharpScript\Game\Module\Launcher\Action\HotFixDownSubPackageDownLoadMobileClearPopView.cs" />
+    <Compile Include="CSharpScript\Game\Module\Launcher\Action\HotFixDownSubPackageDownLoadMobileClearPopViewDefine.cs" />
+    <Compile Include="CSharpScript\Game\Module\Launcher\Action\HotFixSubPackageDownLoadVersionTipsView.cs" />
+    <Compile Include="CSharpScript\Game\Module\Launcher\Action\ISubPackageDownLoadMobileClearData.cs" />
+    <Compile Include="CSharpScript\Game\Module\Launcher\Action\ISubPackageDownLoadMobileClearInfoItemData.cs" />
+    <Compile Include="CSharpScript\Game\Module\Launcher\Action\SubPackageDownLoadMobileClearData.cs" />
+    <Compile Include="CSharpScript\Game\Module\Launcher\Action\SubPackageDownLoadMobileClearInfoItem.cs" />
+    <Compile Include="CSharpScript\Game\Module\Launcher\Action\SubPackageDownLoadMobileClearInfoItemData.cs" />
+    <Compile Include="CSharpScript\Game\Module\Launcher\Action\SubPackageDownLoadMobileClearItem.cs" />
+    <Compile Include="CSharpScript\Game\Module\Launcher\Action\SubPackageDownLoadMobileClearTitleItem.cs" />
+    <Compile Include="CSharpScript\Launcher\AppLinks.cs" />
+    <Compile Include="CSharpScript\Launcher\AppLinksLog.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\BaseConfigController.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\BaseConfigModel.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\BaseDefine.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\ClientFightConfigData.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\EAppType.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\EAppTypeExtensions.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\EAppTypeJsonConverter.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\EHitResult.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\EntryJson.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\ERestartType.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\ICdnScoreCfg.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\ICdnScoreFormula.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\ICdnScoreStep.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\ICdnUrlData.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\IClientFightConfigData.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\IEvalConfig.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\IEvalNetworkConfig.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\IFeedBackData.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\IGachaUrl.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\IGrayBoxConfig.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\IGrayBoxItem.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\IGrayBoxItemConfig.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\ILoginServersData.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\ILogReport.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\IPrivateServersData.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\ISecondaryUrlData.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\ITDConfig.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\IUdpProbe.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\IUdpRegion.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\IUpdateUrl.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\Partial.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\TBuildInfoKey.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\TBuildInfoKeyExtensions.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\TBuildInfoKeyJsonConverter.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\TConfigVersionKey.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\TConfigVersionKeyExtensions.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\TConfigVersionKeyJsonConverter.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\TPublicConfigKey.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\TPublicConfigKeyExtensions.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\TPublicConfigKeyJsonConverter.cs" />
+    <Compile Include="CSharpScript\Launcher\BaseConfig\VersionInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\CSharpScriptBuildInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\Define\DbInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\Define\EResFile.cs" />
+    <Compile Include="CSharpScript\Launcher\Define\EResFileExtensions.cs" />
+    <Compile Include="CSharpScript\Launcher\Define\EResFileJsonConverter.cs" />
+    <Compile Include="CSharpScript\Launcher\Define\EResType.cs" />
+    <Compile Include="CSharpScript\Launcher\Define\EResTypeExtensions.cs" />
+    <Compile Include="CSharpScript\Launcher\Define\EResTypeJsonConverter.cs" />
+    <Compile Include="CSharpScript\Launcher\Define\HotPatchLog.cs" />
+    <Compile Include="CSharpScript\Launcher\Define\IDiffUpdateReportEvent.cs" />
+    <Compile Include="CSharpScript\Launcher\Define\IDiffUpdateUiEvent.cs" />
+    <Compile Include="CSharpScript\Launcher\Define\LauncherConfigLib.cs" />
+    <Compile Include="CSharpScript\Launcher\Define\LauncherDownLoadConfig.cs" />
+    <Compile Include="CSharpScript\Launcher\Define\LauncherEnum.cs" />
+    <Compile Include="CSharpScript\Launcher\Define\LauncherMenuConfig.cs" />
+    <Compile Include="CSharpScript\Launcher\Define\LauncherServerLimitConfig.cs" />
+    <Compile Include="CSharpScript\Launcher\Define\LaunchGameSettingMenuConfig.cs" />
+    <Compile Include="CSharpScript\Launcher\Define\LaunchLanguageDefineConfig.cs" />
+    <Compile Include="CSharpScript\Launcher\Define\SimpleTabel\TableBaseRow.cs" />
+    <Compile Include="CSharpScript\Launcher\Define\SimpleTabel\TableReader.cs" />
+    <Compile Include="CSharpScript\Launcher\Define\SimpleTabel\TableReaderUtil.cs" />
+    <Compile Include="CSharpScript\Launcher\Define\SimpleTabel\TableRegistry.cs" />
+    <Compile Include="CSharpScript\Launcher\Define\SimpleTabel\Vector2D.cs" />
+    <Compile Include="CSharpScript\Launcher\Define\SplashRegionBlockConfig.cs" />
+    <Compile Include="CSharpScript\Launcher\Define\SplashRegionGeoIpProvider.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Data\AggregatedManifestVersionInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Data\ChunkTool.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Data\DestFileInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Data\EKuroPatchResult.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Data\IdenticalPair.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Data\LanguageVersionInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Data\LauncherVersionInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Data\LocalFileInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Data\MoveParams.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Data\OptionalDownloadVersionInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Data\PakFilePair.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Data\PatchInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Data\PatchManifest.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Data\PatchManifestConverter.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Data\PatchManifestJson.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Data\PatchParams.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Data\RequireFileInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Data\ResFileInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Data\ResFileInfoConverter.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Data\ResourceVersionInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Data\ResVersionInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Data\RoleVoiceItemVersionInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Data\TierLanguageVersionInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Data\TierOptionalDownloadVersionInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Data\TierResourceVersionInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Data\TsPatchApi.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Data\VideoResPackageInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Data\VideoVersionInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\OH\IWantedTarget.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\OH\OHConsumeLogInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\OH\OHPresetResourceConsumer.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Procedure\AndroidDiffPatchProcedure.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Procedure\BaseDiffPatchProcedure.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Procedure\ERemoteConfigResult.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Procedure\IDiffPatchProcedure.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Procedure\IosDiffPatchProcedure.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Procedure\MobileDiffPatchProcedure.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Procedure\OpenHarmonyDiffPatchProcedure.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Procedure\OthersDiffPatchProcedure.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Update\DiffUpdate.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Update\EUpdateMode.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Update\EUpdateType.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Update\EVideoResSizeType.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Update\RemotePakMapConfig.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Update\RemoteVideoConfig.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Update\RemoteVideoConfigUpdateTime.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Update\TierPrefetch.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Update\UpdateReportEvent.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Update\UpdateUiEvent.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Update\VideoItem.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Update\VideoPreDownload.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Update\VideoResourceInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\DiffPatch\Update\VideoResUpdate.cs" />
+    <Compile Include="CSharpScript\Launcher\Download\CdnScoreEvalResult.cs" />
+    <Compile Include="CSharpScript\Launcher\Download\CdnScoreFormula.cs" />
+    <Compile Include="CSharpScript\Launcher\Download\CdnScoreSelectionResult.cs" />
+    <Compile Include="CSharpScript\Launcher\Download\EDownloadState.cs" />
+    <Compile Include="CSharpScript\Launcher\Download\EDownloadStateExtensions.cs" />
+    <Compile Include="CSharpScript\Launcher\Download\EDownloadStateJsonConverter.cs" />
+    <Compile Include="CSharpScript\Launcher\Download\HotPatchLogResult.cs" />
+    <Compile Include="CSharpScript\Launcher\Download\IDownloadResult.cs" />
+    <Compile Include="CSharpScript\Launcher\Download\IEvaluateResult.cs" />
+    <Compile Include="CSharpScript\Launcher\Download\IPrefixDownloadResult.cs" />
+    <Compile Include="CSharpScript\Launcher\Download\IResponse.cs" />
+    <Compile Include="CSharpScript\Launcher\Download\RequestFileInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\Download\Response.cs" />
+    <Compile Include="CSharpScript\Launcher\Download\TProgressType.cs" />
+    <Compile Include="CSharpScript\Launcher\Download\UrlPrefixDownload.cs" />
+    <Compile Include="CSharpScript\Launcher\Download\UrlPrefixHttpRequest.cs" />
+    <Compile Include="CSharpScript\Launcher\Download\UrlPrefixInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\Download\UrlPrefixSelector.cs" />
+    <Compile Include="CSharpScript\Launcher\EAppChannel.cs" />
+    <Compile Include="CSharpScript\Launcher\EAppPlatform.cs" />
+    <Compile Include="CSharpScript\Launcher\EHotPatchState.cs" />
+    <Compile Include="CSharpScript\Launcher\ENetworkType.cs" />
+    <Compile Include="CSharpScript\Launcher\ETsCompileShaderBatchMode.cs" />
+    <Compile Include="CSharpScript\Launcher\Framework\ITickable.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatch.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchKuroSdk\ESdkHotPatchReportEnum.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchKuroSdk\GameWindowStateData.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchKuroSdk\HotPatchKuroSdk.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchKuroSdk\HotPatchKuroTdm.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchKuroSdk\HotPatchReportData.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchKuroSdk\LauncherSdk.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchKuroSdk\LauncherSdkAndroid.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchKuroSdk\LauncherSdkBase.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchKuroSdk\LauncherSdkCloud.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchKuroSdk\LauncherSdkIosGlobal.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchKuroSdk\LauncherSdkMacGlobal.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchKuroSdk\LauncherSdkOpenHarmony.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchKuroSdk\LauncherSdkWindows.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchKuroSdk\LauncherSdkWindowsGlobal.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchKuroSdk\LauncherSdkXboxGlobal.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchKuroSdk\SdkCheckVersionEnd.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchKuroSdk\SdkCheckVersionFail.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchKuroSdk\SdkCheckVersionStart.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchKuroSdk\SdkLogoReportData.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchKuroSdk\SdkReportData.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchKuroSdk\SdkResourceDownloadEnd.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchKuroSdk\SdkResourceDownloadFail.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchKuroSdk\SdkResourceDownloadStart.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchKuroSdk\UserInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchLog.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchLogData.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchLoginReport.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchLogReport.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchLogResult.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchProcedure\AndroidHotPatchProcedure.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchProcedure\BaseHotPatchProcedure.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchProcedure\ERemoteConfigResult.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchProcedure\IHotPatchProcedure.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchProcedure\IosHotPatchProcedure.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchProcedure\MobileHotPatchProcedure.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchProcedure\OthersHotPatchProcedure.cs" />
+    <Compile Include="CSharpScript\Launcher\HotPatchPushSdk\HotPatchPushSdk.cs" />
+    <Compile Include="CSharpScript\Launcher\InitialMobileResCleanUpViewStateLog.cs" />
+    <Compile Include="CSharpScript\Launcher\InitialResDownloadStateLog.cs" />
+    <Compile Include="CSharpScript\Launcher\InputDevice\EInputControllerType.cs" />
+    <Compile Include="CSharpScript\Launcher\InputDevice\InputDevice.cs" />
+    <Compile Include="CSharpScript\Launcher\LauncherHttp.cs" />
+    <Compile Include="CSharpScript\Launcher\LauncherNetworkDetectionBaseLog.cs" />
+    <Compile Include="CSharpScript\Launcher\LauncherNetworkDetectionProgressLog.cs" />
+    <Compile Include="CSharpScript\Launcher\LauncherNetworkDetectionResultLog.cs" />
+    <Compile Include="CSharpScript\Launcher\LauncherProcedure.cs" />
+    <Compile Include="CSharpScript\Launcher\LauncherVersionFirstDownloadTypeLog.cs" />
+    <Compile Include="CSharpScript\Launcher\LoginLogEvent.cs" />
+    <Compile Include="CSharpScript\Launcher\LoginLogEventDefine.cs" />
+    <Compile Include="CSharpScript\Launcher\LoginProcessLink.cs" />
+    <Compile Include="CSharpScript\Launcher\LogUpload\ELauncherLogUploadReason.cs" />
+    <Compile Include="CSharpScript\Launcher\LogUpload\IKuroSdkController.cs" />
+    <Compile Include="CSharpScript\Launcher\LogUpload\ILocalSendedSave.cs" />
+    <Compile Include="CSharpScript\Launcher\LogUpload\ILocalStorage.cs" />
+    <Compile Include="CSharpScript\Launcher\LogUpload\ILoginModel.cs" />
+    <Compile Include="CSharpScript\Launcher\LogUpload\ILogUploadParams.cs" />
+    <Compile Include="CSharpScript\Launcher\LogUpload\INet.cs" />
+    <Compile Include="CSharpScript\Launcher\LogUpload\IPlayerInfoModel.cs" />
+    <Compile Include="CSharpScript\Launcher\LogUpload\ISendLogReason.cs" />
+    <Compile Include="CSharpScript\Launcher\LogUpload\KuroSdkController.cs" />
+    <Compile Include="CSharpScript\Launcher\LogUpload\LauncherLogUpload.cs" />
+    <Compile Include="CSharpScript\Launcher\LogUpload\LauncherLogUploadHelper.cs" />
+    <Compile Include="CSharpScript\Launcher\LogUpload\LocalStorage.cs" />
+    <Compile Include="CSharpScript\Launcher\LogUpload\LoginModel.cs" />
+    <Compile Include="CSharpScript\Launcher\LogUpload\LogUploadParams.cs" />
+    <Compile Include="CSharpScript\Launcher\LogUpload\Net.cs" />
+    <Compile Include="CSharpScript\Launcher\LogUpload\NetworkDetectionLogUploadHandle.cs" />
+    <Compile Include="CSharpScript\Launcher\LogUpload\PlayerInfoModel.cs" />
+    <Compile Include="CSharpScript\Launcher\LogUpload\SendLogReason.cs" />
+    <Compile Include="CSharpScript\Launcher\LogUpload\TNetworkDetectionLogUploadFinishCallBack.cs" />
+    <Compile Include="CSharpScript\Launcher\MobileResCleanUpFinishStateLog.cs" />
+    <Compile Include="CSharpScript\Launcher\MobileResCleanUpStateLog.cs" />
+    <Compile Include="CSharpScript\Launcher\MobileResCleanUpStateLogContentData.cs" />
+    <Compile Include="CSharpScript\Launcher\NetworkDetection\EDetectionViewState.cs" />
+    <Compile Include="CSharpScript\Launcher\NetworkDetection\EIcmpResponseStatus.cs" />
+    <Compile Include="CSharpScript\Launcher\NetworkDetection\ENetworkDetectionType.cs" />
+    <Compile Include="CSharpScript\Launcher\NetworkDetection\ESendState.cs" />
+    <Compile Include="CSharpScript\Launcher\NetworkDetection\EUploadState.cs" />
+    <Compile Include="CSharpScript\Launcher\NetworkDetection\IBatchPingResult.cs" />
+    <Compile Include="CSharpScript\Launcher\NetworkDetection\IHttpPostResult.cs" />
+    <Compile Include="CSharpScript\Launcher\NetworkDetection\ILoginNetworkDetectionConfig.cs" />
+    <Compile Include="CSharpScript\Launcher\NetworkDetection\INetworkDetectionConfig.cs" />
+    <Compile Include="CSharpScript\Launcher\NetworkDetection\INetworkDetectionEntry.cs" />
+    <Compile Include="CSharpScript\Launcher\NetworkDetection\INetworkDetectionHttpResult.cs" />
+    <Compile Include="CSharpScript\Launcher\NetworkDetection\INetworkDetectionPingResult.cs" />
+    <Compile Include="CSharpScript\Launcher\NetworkDetection\INetworkDetectionProxyResult.cs" />
+    <Compile Include="CSharpScript\Launcher\NetworkDetection\INetworkDetectionResult.cs" />
+    <Compile Include="CSharpScript\Launcher\NetworkDetection\IPingResult.cs" />
+    <Compile Include="CSharpScript\Launcher\NetworkDetection\LauncherNetworkDetectionController.cs" />
+    <Compile Include="CSharpScript\Launcher\NetworkDetection\LauncherNetworkDetectionDefine.cs" />
+    <Compile Include="CSharpScript\Launcher\NetworkDetection\LauncherNetworkDetectionModel.cs" />
+    <Compile Include="CSharpScript\Launcher\NetworkDetection\NetworkDetectionPingMgr.cs" />
+    <Compile Include="CSharpScript\Launcher\Notice\LauncherNoticeDefine.cs" />
+    <Compile Include="CSharpScript\Launcher\Notice\LauncherNoticeUtils.cs" />
+    <Compile Include="CSharpScript\Launcher\PackageUpdate\PackageUpdateController.cs" />
+    <Compile Include="CSharpScript\Launcher\PackageUpdate\TaptapWrapper.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\CloudGameManagerLauncher.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\ECloudGamePlatform.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\ECloudGamePlatformExtensions.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\ECloudGamePlatformJsonConverter.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\EPlatformType.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\Platform.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\AuthCodeData.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\BilibiliParam.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\ClientSwitch.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\ClientUrl.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\CsLinkEntry.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\DisplayProductInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\DouyinParam.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\ECheckoutReason.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\EPlayStaionScope.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\EPlayStaionScopeConst.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\EPlayStationNetworkReachabilityState.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\EPsActivityEndActivityOutcome.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\EPsActivityEndActivityOutcomeExtensions.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\EPsActivityEndActivityOutcomeJsonConverter.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\EReportRoleDataType.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\ESdkCommunicationRestricted.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\ESdkDialogResult.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\ESdkMessageBoxMode.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\ESdkMessageBoxState.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\ESdkMessageBoxType.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\ESdkRelation.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\EventData.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\IBlockData.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\IBlockDataContent.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\IBlockResponseData.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\ICheckoutProductResponse.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\IConfigJson.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\IConnectResponse.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\IConnectResponseData.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\IGetAccessTokenResponse.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\IGetAccessTokenResponseData.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\IIdTokenData.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\ILoginResponse.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\ILoginResponseData.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\IPlatformData.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\IPlatformReleaseData.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\IPlayStationAccountData.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\IPlayStationOnlineData.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\IQueryGoodsResponse.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\IQueryGoodsResponseData.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\IQueryProductResult.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\IRenewAccessTokenResponse.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\IRenewAccessTokenResponseData.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\IReportResponse.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\ISdkRequestCheckoutProductParam.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\ISdkRequestEmailCodeResponse.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\ISdkTrophyInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\KujiequParam.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\LoginElement.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportAgreementClick.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportAgreementShow.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportClickAccountCenter.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportClickAnnouncement.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportClickCustomerService.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportClickLogin.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportClickOldAccount.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportClickProtocol.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportClickSendCode.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportClosePsnCheckOut.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportCreateNewAccount.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportCreateRole.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportFirstGetDid.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportGetDid.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportGetDidSuccess.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportGetEntitlementLabelList.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportGetEntitlementLabelListFail.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportGetEntitlementLabelListSuccess.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportGetGameLanguage.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportGetGoodsList.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportGetGoodsListFail.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportGetGoodsListSuccess.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportGetPsnAuth.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportLaunchGame.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportLogin.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportLoginFail.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportLoginRole.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportLoginSuccess.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportLoginWindow.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportOpenPsnCheckOut.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportPsnAccessId.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportSdkInitFail.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportSdkInitSuccess.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportSdkKeepAlive.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportSdkOffLine.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportSdkOfflineSucc.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportSelectLogin.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportTerminateGame.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportUpgradeRole.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportUploadPsnBill.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportUploadPsnBillFail.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformReportUploadPsnBillSuccess.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformSdkConfig.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformSdkManagerNew.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformSdkNew.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformSdkReportBaseData.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformSdkServer.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformSdkServerMsg.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformSdkServerMsgExtensions.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlatformSdkServerMsgJsonConverter.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlayStation5Sdk.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\PlayStationTrophy.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\QQParam.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\ReportRoleData.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\RequestEmailCodeResponse.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\SdkPlatformConfig.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\SdkServerEncodeHelper.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\ShareSDKParam.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\ThirdLogin.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\ThirdShareParams.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\TSdkCheckoutProductCallback.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\TSDKConnectCallback.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\TSDKGetAccessTokenCallback.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\TSDKLoginCallback.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\TSDKQueryGoodsCallback.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\TSDKQuerySdkBlockCallBack.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\TSDKRenewAccessTokenCallback.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\TSdkReportCallBack.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\TSdkRequestEmailCodeCallback.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\UniversalDataSystemManager.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\WeChatParam.cs" />
+    <Compile Include="CSharpScript\Launcher\Platform\PlatformSdk\WeiboParam.cs" />
+    <Compile Include="CSharpScript\Launcher\PlayerInput\actionMappings.cs" />
+    <Compile Include="CSharpScript\Launcher\PlayerInput\axisMappings.cs" />
+    <Compile Include="CSharpScript\Launcher\PlayerInput\EGamepadKey.cs" />
+    <Compile Include="CSharpScript\Launcher\PlayerInput\EMouseKey.cs" />
+    <Compile Include="CSharpScript\Launcher\PlayerInput\HotPatchEventSystem.cs" />
+    <Compile Include="CSharpScript\Launcher\PlayerInput\HotPatchInputDefine.cs" />
+    <Compile Include="CSharpScript\Launcher\PlayerInput\HotPatchInputManager.cs" />
+    <Compile Include="CSharpScript\Launcher\PlayerInput\IKeyPath.cs" />
+    <Compile Include="CSharpScript\Launcher\PlayerInput\KeyPath.cs" />
+    <Compile Include="CSharpScript\Launcher\PlayerInput\TInputAction.cs" />
+    <Compile Include="CSharpScript\Launcher\PlayerInput\TInputAxis.cs" />
+    <Compile Include="CSharpScript\Launcher\PlayerInput\TTouchAction.cs" />
+    <Compile Include="CSharpScript\Launcher\PlayerInput\TTouchMovedAction.cs" />
+    <Compile Include="CSharpScript\Launcher\PreDownload\EPreDownloadMode.cs" />
+    <Compile Include="CSharpScript\Launcher\PreDownload\EPreDownloadState.cs" />
+    <Compile Include="CSharpScript\Launcher\PreDownload\IPreDownload.cs" />
+    <Compile Include="CSharpScript\Launcher\PreDownload\IPreDownloadUiEvent.cs" />
+    <Compile Include="CSharpScript\Launcher\PreDownload\NullPreDownload.cs" />
+    <Compile Include="CSharpScript\Launcher\PreDownload\PreDownloadConfig.cs" />
+    <Compile Include="CSharpScript\Launcher\PreDownload\PreDownloadManager.cs" />
+    <Compile Include="CSharpScript\Launcher\PreDownload\PreDownloadUiEvent.cs" />
+    <Compile Include="CSharpScript\Launcher\RemoteConfig.cs" />
+    <Compile Include="CSharpScript\Launcher\RemoteInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\RemoteVersionConfig.cs" />
+    <Compile Include="CSharpScript\Launcher\ResDownloadDeviceStorageState.cs" />
+    <Compile Include="CSharpScript\Launcher\ResVersion.cs" />
+    <Compile Include="CSharpScript\Launcher\SdkGameLoadComplete.cs" />
+    <Compile Include="CSharpScript\Launcher\Server\ELoginGetPlayerInfoEnum.cs" />
+    <Compile Include="CSharpScript\Launcher\Server\LauncherServer.cs" />
+    <Compile Include="CSharpScript\Launcher\Server\LauncherServerDefine.cs" />
+    <Compile Include="CSharpScript\Launcher\Server\LoginPlayerInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\Server\UserRegionInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\SoPatch\CheckConditions.cs" />
+    <Compile Include="CSharpScript\Launcher\SoPatch\GrayInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\SoPatch\MobileFilter.cs" />
+    <Compile Include="CSharpScript\Launcher\SoPatch\SoEnableInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\SoPatch\SoPatchDefine.cs" />
+    <Compile Include="CSharpScript\Launcher\SoPatch\SoPatchFileInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\SoPatch\SoPatchStatic.cs" />
+    <Compile Include="CSharpScript\Launcher\SoPatch\SoPatchWrapper.cs" />
+    <Compile Include="CSharpScript\Launcher\SoPatch\SoPathConfig.cs" />
+    <Compile Include="CSharpScript\Launcher\SoPatch\SoVersion.cs" />
+    <Compile Include="CSharpScript\Launcher\SoPatch\VersionInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\StorageAlertLog.cs" />
+    <Compile Include="CSharpScript\Launcher\ThinkDataReport\RealKRDataLaunchReporter.cs" />
+    <Compile Include="CSharpScript\Launcher\ThinkDataReport\RealThinkDataLaunchReporter.cs" />
+    <Compile Include="CSharpScript\Launcher\ThinkDataReport\ThinkDataLaunchReporter.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\EHotFixTextId.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\EResourceQualityTierLabel.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\EResourceQualityTierLabelExtensions.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\EResourceQualityTierLabelJsonConverter.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\EResourceQualityTierTextId.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\EResourceQualityTierTextIdExtensions.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\EResourceQualityTierTextIdJsonConverter.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\ERestartTipType.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\ERestartTipTypeExtensions.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\ERestartTipTypeJsonConverter.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\HotFixBtnUiItem.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\HotFixButtonItem.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\HotFixChangeTierPopupView.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\HotFixDownLoadFreeSpaceTipsView.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\HotFixDownLoadTabItem.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\HotFixDownLoadTabItemData.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\HotFixDownLoadView.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\HotFixGameSettingManager.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\HotFixLayout.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\HotFixLayoutData.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\HotFixLayoutItem.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\HotFixLguiUtils.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\HotFixListenDeviceSwitchText.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\HotFixManager.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\HotFixPopupRepairView.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\HotFixPopupUiView.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\HotFixResTierItem.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\HotFixSceneManager.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\HotFixSequencePlayer.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\HotFixToolWindowView.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\HotFixUiView.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\HttpSubPackageResult.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\IHotFixDownLoadTabItemData.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\IHotFixLayoutData.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\IHotFixLayoutItem.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\IResourceUpdateView.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\NetWorkDetection\HotFixNetworkDetectionEntryItem.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\NetWorkDetection\HotFixNetworkDetectionLayoutItemData.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\NetWorkDetection\HotFixNetworkDetectionModel.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\NetWorkDetection\HotFixNetworkDetectionTips.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\NetWorkDetection\HotFixNetworkDetectionView.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\NetWorkDetection\HotFixNetworkDetectSelectData.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\NetWorkDetection\IHotFixNetworkDetectionLayoutItemData.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\NetWorkDetection\IHotFixNetworkDetectSelectData.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\NetWorkDetection\SelectServer\HotFixNetworkDetectSelectItem.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\NetWorkDetection\SelectServer\HotFixNetworkDetectSelectView.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\NetWorkDetection\TOnSelectServerCallback.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\ResourcePackagePositionData.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\ResourceUpdateViewBase.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\SubPackageHttpData.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\HotFix\THotFixLayoutItemClickCallBack.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\LaunchComponentsAction.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\LaunchUtil.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\SdkView\ProtocolItem.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\SdkView\SdkProtocolView.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\SdkView\SdkProtocolViewData.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\SdkView\SdkProtocolViewLayoutData.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\Splash\SplashUiView.cs" />
+    <Compile Include="CSharpScript\Launcher\Ui\Splash\SplashUmgBase.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\AppPathMisc.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\AppUtil.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\AppVersionMisc.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\DownloadViewInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\EKuroCheckResult.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ELanguageDownloadStatus.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\EVideoDownloadStatus.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\HotPatchCheckResHashLogInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\IRevertVersionInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\LanguageUpdateManager.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\LanguageUpdater.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\LanguageUpdateUiEvent.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\LanguageUpdateViewAgent.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\LanguageVersionMisc.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\LauncherVersionMisc.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\PakKeyLog.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\PakKeyUpdate.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\PakListConfig.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\PatchFileInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\Config\DownLoadSubPackageRow.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\Config\DownLoadSubPackageTable.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\Config\DungeonPackInfoRow.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\Config\DungeonPackInfoTable.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\Config\MapBlockInfoRow.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\Config\MapBlockInfoTable.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\Config\PackSelectionTables.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\Config\QuestRefMapBlockRow.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\Config\QuestRefMapBlockTable.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\Config\QuestRefVideoConfigRow.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\Config\QuestRefVideoConfigTable.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\Config\RecallConfigRow.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\Config\RecallConfigTable.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\Config\RecommendPackRow.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\Config\RecommendPackTable.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\Config\RefResourceQuestListRow.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\Config\RefResourceQuestListTable.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\Config\RoleVoiceLanguageTable.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\Config\RoleVoiceLanguageTableRow.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\EResUpdateType.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\IResourceTypeModule.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\Module\BaseResourceModule.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\Module\BlockResourceModule.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\Module\VideoResourceModule.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\Module\VoiceResourceModule.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\OptionalPackSelector.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\PackClassification.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\ResourceDiffUpdaterManager.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\ResourceSelectionContext.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\ResourceUpdateUtils.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\SelectionDecision.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\Updater\CompositeResourceDiffUpdater.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\Updater\EResDownloadStatus.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\Updater\ResourceDiffUpdater.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\Updater\ResourceDiffUpdateUiEvent.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\Updater\ResourceUpdateViewAgent.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceDiffUpdate\Updater\VideoResourceDiffUpdater.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceUpdate.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\ResourceVersionMisc.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\RevertVersionInfo.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\VideoUpdateManager.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\VideoUpdater.cs" />
+    <Compile Include="CSharpScript\Launcher\Update\VideoUpdateUiEvent.cs" />
+    <Compile Include="CSharpScript\Launcher\Util\ELauncherStorageDeviceKey.cs" />
+    <Compile Include="CSharpScript\Launcher\Util\ELauncherStorageGlobalKey.cs" />
+    <Compile Include="CSharpScript\Launcher\Util\EMetaType.cs" />
+    <Compile Include="CSharpScript\Launcher\Util\EMetaTypeExtensions.cs" />
+    <Compile Include="CSharpScript\Launcher\Util\EMetaTypeJsonConverter.cs" />
+    <Compile Include="CSharpScript\Launcher\Util\ESpecialValue.cs" />
+    <Compile Include="CSharpScript\Launcher\Util\ESpecialValueExtensions.cs" />
+    <Compile Include="CSharpScript\Launcher\Util\ESpecialValueJsonConverter.cs" />
+    <Compile Include="CSharpScript\Launcher\Util\ETier.cs" />
+    <Compile Include="CSharpScript\Launcher\Util\IDoResult.cs" />
+    <Compile Include="CSharpScript\Launcher\Util\JsonSettings.cs" />
+    <Compile Include="CSharpScript\Launcher\Util\Json\Generated\LauncherJsonSourceGenContext.cs" />
+    <Compile Include="CSharpScript\Launcher\Util\Json\LauncherJsonConverter.cs" />
+    <Compile Include="CSharpScript\Launcher\Util\Json\LauncherJsonReader.cs" />
+    <Compile Include="CSharpScript\Launcher\Util\Json\LauncherJsonSettings.cs" />
+    <Compile Include="CSharpScript\Launcher\Util\Json\LauncherJsonWriter.cs" />
+    <Compile Include="CSharpScript\Launcher\Util\Json\TsBigIntJsonConverter.cs" />
+    <Compile Include="CSharpScript\Launcher\Util\LauncherAudio.cs" />
+    <Compile Include="CSharpScript\Launcher\Util\LauncherDeviceTierLib.cs" />
+    <Compile Include="CSharpScript\Launcher\Util\LauncherGameSettingLib.cs" />
+    <Compile Include="CSharpScript\Launcher\Util\LauncherJson.cs" />
+    <Compile Include="CSharpScript\Launcher\Util\LauncherLanguageLib.cs" />
+    <Compile Include="CSharpScript\Launcher\Util\LauncherResourceLib.cs" />
+    <Compile Include="CSharpScript\Launcher\Util\LauncherStorageLib.cs" />
+    <Compile Include="CSharpScript\Launcher\Util\LauncherTextLib.cs" />
+    <Compile Include="CSharpScript\Launcher\Util\LaunchLangDefine.cs" />
+    <Compile Include="CSharpScript\Launcher\Util\NearbyQuitGate.cs" />
+    <Compile Include="CSharpScript\Launcher\Util\ProcedureUtil.cs" />
+    <Compile Include="CSharpScript\Launcher\Util\SplashRegionBlockLib.cs" />
+    <Compile Include="CSharpScript\Launcher\VersionItem.cs" />
+    <Compile Include="CSharpScript\ThirdParty\UniTaskExtensions\UnobservedExceptionHandler.cs" />
+    <Compile Include="CSharpScript\Typing\FKuroAnalyticsForCSharp.cs" />
+    <Compile Include="CSharpScript\Typing\FThinkingAnalyticsForCSharp.cs" />
+    <Compile Include="CSharpScript\Typing\KuroApplication.cs" />
+    <Compile Include="CSharpScript\Typing\KuroLoggingLibrary.cs" />
+    <Compile Include="CSharpScript\Typing\KuroScreen.cs" />
+    <Compile Include="CSharpScript\Typing\SharpherealNativeWrapper.cs" />
+    <Compile Include="CSharpScript\Typing\TypingInvokeConfig.cs" />
+    <Compile Include="DecoratorManager.cs" />
+    <Compile Include="DelegateUtils.cs" />
+    <Compile Include="Generated\StaticVariableRegister\StaticVariableRegister.cs" />
+    <Compile Include="HttpResult.cs" />
+    <Compile Include="Launch.cs" />
+    <Compile Include="LauncherFileLib.cs" />
+    <Compile Include="LauncherLog.cs" />
+    <Compile Include="LoginNoticeEx.cs" />
+    <Compile Include="LogJsonRawAttribute.cs" />
+    <Compile Include="LogJsonSerializableAttribute.cs" />
+    <Compile Include="PackageSpaceModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResPackageInfo.cs" />
+    <Compile Include="Result.cs" />
+    <Compile Include="ResultData.cs" />
+    <Compile Include="SplashPhase.cs" />
+    <Compile Include="StaticVariableRegister.cs" />
+    <Compile Include="TryCatch.cs" />
+    <Compile Include="TsHotPatchPanelConfig.cs" />
+    <Compile Include="TsSplash.cs" />
+    <Compile Include="UnrealEngine\ListExtensions.cs" />
+    <Compile Include="__TsHotPatchPanelConfig_InheritProxy.cs" />
+    <Compile Include="__TsHotPatchPanelConfig_SubClassMissingExportProxy.cs" />
+    <Compile Include="__TsSplash_InheritProxy.cs" />
+    <Compile Include="__TsSplash_SubClassMissingExportProxy.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

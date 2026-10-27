@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{37600991-511A-49CC-9A91-B04AB32BBB5D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aki.Core</RootNamespace>
+    <AssemblyName>Aki.Core</AssemblyName>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Google.FlatBuffers">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\Google.FlatBuffers.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Sharphereal.Core">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\Sharphereal.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Concurrent">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Collections.Concurrent.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.StackTrace">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Diagnostics.StackTrace.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Runtime.InteropServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Text.RegularExpressions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\UniTask.dll</HintPath>
+    </Reference>
+    <Reference Include="UnrealEngine">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\UnrealEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="--y__InlineArray2.cs" />
+    <Compile Include="--y__InlineArray3.cs" />
+    <Compile Include="--y__InlineArray4.cs" />
+    <Compile Include="--y__InlineArray5.cs" />
+    <Compile Include="--y__InlineArray6.cs" />
+    <Compile Include="-Module-.cs" />
+    <Compile Include="ActorPoolGuard.cs" />
+    <Compile Include="ActorSystem.cs" />
+    <Compile Include="ActorSystemDebugger.cs" />
+    <Compile Include="AkiUniTask.2.cs" />
+    <Compile Include="AkiUniTask.cs" />
+    <Compile Include="Aki\Config\EditorDefine.cs" />
+    <Compile Include="Aki\Config\ERuntimeType.cs" />
+    <Compile Include="Aki\Core\ConsoleManagerGenerate\ConsoleRegister.cs" />
+    <Compile Include="AkMarkerCbLabel.cs" />
+    <Compile Include="AkMarkerCbLabelSoundTrackEffect.cs" />
+    <Compile Include="Application.cs" />
+    <Compile Include="AudioController.cs" />
+    <Compile Include="AudioDefine.cs" />
+    <Compile Include="AudioEventPool.cs" />
+    <Compile Include="AudioEventPoolItem.cs" />
+    <Compile Include="AudioFilterController.cs" />
+    <Compile Include="AudioFilterState.cs" />
+    <Compile Include="AudioFilterStates.cs" />
+    <Compile Include="AudioPool.cs" />
+    <Compile Include="AudioPoolItem.cs" />
+    <Compile Include="AudioSystem.cs" />
+    <Compile Include="CacheLru.cs" />
+    <Compile Include="ClassDefine.cs" />
+    <Compile Include="ComponentIndexGetter.cs" />
+    <Compile Include="ConditionListener.cs" />
+    <Compile Include="ConfigAttribute.cs" />
+    <Compile Include="ConfigBase.cs" />
+    <Compile Include="ConfigCommon.cs" />
+    <Compile Include="ControllerAttribute.cs" />
+    <Compile Include="ControllerBase.cs" />
+    <Compile Include="Core.cs" />
+    <Compile Include="CSharpScript\Core\Common\AllocationTraceDefine.cs" />
+    <Compile Include="CSharpScript\Core\Common\ArrayToKvpConverter.cs" />
+    <Compile Include="CSharpScript\Core\Common\EEnvironment.cs" />
+    <Compile Include="CSharpScript\Core\Common\HashSetJsonConverter.cs" />
+    <Compile Include="CSharpScript\Core\Common\Info.cs" />
+    <Compile Include="CSharpScript\Core\Common\IntMapStringConverter.cs" />
+    <Compile Include="CSharpScript\Core\Common\Json.cs" />
+    <Compile Include="CSharpScript\Core\Common\JsonObjBase.cs" />
+    <Compile Include="CSharpScript\Core\Common\JsonSettings.cs" />
+    <Compile Include="CSharpScript\Core\Common\OrderedSet.cs" />
+    <Compile Include="CSharpScript\Core\Common\TInputMainTypeChange.cs" />
+    <Compile Include="CSharpScript\Core\Common\TInputTypeChange.cs" />
+    <Compile Include="CSharpScript\Core\Common\TShowTypeChange.cs" />
+    <Compile Include="CSharpScript\Core\Config\CommonDbConnectManager.cs" />
+    <Compile Include="CSharpScript\Core\Config\CommonDbData.cs" />
+    <Compile Include="CSharpScript\Core\Config\ConfigReloadHub.cs" />
+    <Compile Include="CSharpScript\Core\Config\ConfigStatementLibSync.cs" />
+    <Compile Include="CSharpScript\Core\Config\ConnectDbObject.cs" />
+    <Compile Include="CSharpScript\Core\Container\Adjacency.cs" />
+    <Compile Include="CSharpScript\Core\Container\AdjItem.cs" />
+    <Compile Include="CSharpScript\Core\Container\Component.cs" />
+    <Compile Include="CSharpScript\Core\Container\EEulerStrokeKind.cs" />
+    <Compile Include="CSharpScript\Core\Container\EulerStrokeJudge.cs" />
+    <Compile Include="CSharpScript\Core\Container\Graph.cs" />
+    <Compile Include="CSharpScript\Core\Container\GraphDefine.cs" />
+    <Compile Include="CSharpScript\Core\Container\GraphEulerStroke.cs" />
+    <Compile Include="CSharpScript\Core\Container\GraphRuntimeEdge.cs" />
+    <Compile Include="CSharpScript\Core\Container\GraphRuntimeNode.cs" />
+    <Compile Include="CSharpScript\Core\Container\IAdjacency.cs" />
+    <Compile Include="CSharpScript\Core\Container\IAdjItem.cs" />
+    <Compile Include="CSharpScript\Core\Container\IComponent.cs" />
+    <Compile Include="CSharpScript\Core\Container\IEulerStrokeJudge.cs" />
+    <Compile Include="CSharpScript\Core\Container\IGraphRuntimeEdge.cs" />
+    <Compile Include="CSharpScript\Core\Container\IGraphRuntimeNode.cs" />
+    <Compile Include="CSharpScript\Core\Container\IGraphSpace.cs" />
+    <Compile Include="CSharpScript\Core\Container\ISequence.cs" />
+    <Compile Include="CSharpScript\Core\Container\Sequence.cs" />
+    <Compile Include="CSharpScript\Core\Container\Vector2Space.cs" />
+    <Compile Include="CSharpScript\Core\Container\Vector3Space.cs" />
+    <Compile Include="CSharpScript\Core\Decorator\DecoratorDefineAttribute.cs" />
+    <Compile Include="CSharpScript\Core\Decorator\DecoratorImplementAttribute.cs" />
+    <Compile Include="CSharpScript\Core\Define\CollisionProfile.cs" />
+    <Compile Include="CSharpScript\Core\Define\TdConfigExtensions\EPackage.cs" />
+    <Compile Include="CSharpScript\Core\Define\TdConfigExtensions\EPackageExtensions.cs" />
+    <Compile Include="CSharpScript\Core\Define\TdConfigExtensions\EPackageJsonConverter.cs" />
+    <Compile Include="CSharpScript\Core\Define\TdConfigExtensions\IGameRpcService.cs" />
+    <Compile Include="CSharpScript\Core\Define\TdConfigExtensions\IGameRpcServiceDispatch.cs" />
+    <Compile Include="CSharpScript\Core\Define\TdConfigExtensions\IUnitTestRpcService.cs" />
+    <Compile Include="CSharpScript\Core\Define\TdConfigExtensions\RpcArgRegistry.cs" />
+    <Compile Include="CSharpScript\Core\Define\TdConfigExtensions\RpcArgUtils.cs" />
+    <Compile Include="CSharpScript\Core\Define\TdConfigExtensions\RpcDispatchAttribute.cs" />
+    <Compile Include="CSharpScript\Core\Define\TdConfigExtensions\RpcMethodAttribute.cs" />
+    <Compile Include="CSharpScript\Core\Define\TdConfigExtensions\RpcServer.cs" />
+    <Compile Include="CSharpScript\Core\Define\TdConfigExtensions\RpcUniTaskHelper.cs" />
+    <Compile Include="CSharpScript\Core\Define\TdConfigExtensions\Stcp.cs" />
+    <Compile Include="CSharpScript\Core\Define\TdConfigExtensions\TFunction.cs" />
+    <Compile Include="CSharpScript\Core\Define\TdConfigExtensions\TRpcClientType.cs" />
+    <Compile Include="CSharpScript\Core\Define\TdConfigExtensions\TService.cs" />
+    <Compile Include="CSharpScript\Core\Extension\VectorExtension.cs" />
+    <Compile Include="CSharpScript\Core\Framework\IConfigManagerBase.cs" />
+    <Compile Include="CSharpScript\Core\Framework\IControllerManagerBase.cs" />
+    <Compile Include="CSharpScript\Core\Framework\IModelManagerBase.cs" />
+    <Compile Include="CSharpScript\Core\Framework\TickControllerAttribute.cs" />
+    <Compile Include="CSharpScript\Core\GameBudgetAllocator\FKuroGameBudgetAllocatorCSharpInterface.cs" />
+    <Compile Include="CSharpScript\Core\GlobalRefCache.cs" />
+    <Compile Include="CSharpScript\Core\Model\FAiSenseObject.cs" />
+    <Compile Include="CSharpScript\Core\Model\FKuroJsModelCSharpInterface.cs" />
+    <Compile Include="CSharpScript\Core\Model\JsModelManager.cs" />
+    <Compile Include="CSharpScript\Core\Net\MessageSerializationBuffer.cs" />
+    <Compile Include="CSharpScript\Core\Net\NetGameBudgetOnceTaskGroup.cs" />
+    <Compile Include="CSharpScript\Core\Utils\GeneratedUtils.cs" />
+    <Compile Include="CSharpScript\Core\Utils\LockingHandler\UniqueLockingHandler.cs" />
+    <Compile Include="CSharpScript\Core\Utils\RomanNumeralUtils.cs" />
+    <Compile Include="CSharpScript\Core\Utils\StateMachine\StateMachineCommon.cs" />
+    <Compile Include="CSharpScript\Typing\FBulletHitActorInterface.cs" />
+    <Compile Include="CSharpScript\Typing\FCrashSightProxy.cs" />
+    <Compile Include="CSharpScript\Typing\FFastMoveReplaySample.cs" />
+    <Compile Include="CSharpScript\Typing\FKuroAIPerceptionUtils.cs" />
+    <Compile Include="CSharpScript\Typing\FKuroCrashCollectionController.cs" />
+    <Compile Include="CSharpScript\Typing\FKuroCycleCounter.cs" />
+    <Compile Include="CSharpScript\Typing\FKuroDataTableFunctionLibrary.cs" />
+    <Compile Include="CSharpScript\Typing\FKuroPerfSightHelper.cs" />
+    <Compile Include="CSharpScript\Typing\FKuroWaterDetectedInterfaceHelper.cs" />
+    <Compile Include="CSharpScript\Typing\FTpSafeProxy.cs" />
+    <Compile Include="CSharpScript\Typing\FuncOpenLibrary.cs" />
+    <Compile Include="CSharpScript\Typing\GameplayTagsManager.cs" />
+    <Compile Include="CSharpScript\Typing\KuroCharacterShadowLibrary.cs" />
+    <Compile Include="CSharpScript\Typing\KuroGasStaticLibrary.cs" />
+    <Compile Include="CSharpScript\Typing\KuroTime.cs" />
+    <Compile Include="CubicBezierCurve.cs" />
+    <Compile Include="CubicCurve.cs" />
+    <Compile Include="CubicCurveWithStartSlope.cs" />
+    <Compile Include="CurveBase.cs" />
+    <Compile Include="CurveFloatConstants.cs" />
+    <Compile Include="CurveFloatHandle.cs" />
+    <Compile Include="CustomPromise.2.cs" />
+    <Compile Include="CustomPromise.cs" />
+    <Compile Include="CycleCounter.cs" />
+    <Compile Include="DataTableCacheData.cs" />
+    <Compile Include="DataTableKeyRow.cs" />
+    <Compile Include="DecoratorManager.cs" />
+    <Compile Include="Deque.cs" />
+    <Compile Include="DeserializeConfig.cs" />
+    <Compile Include="DisjointSet.cs" />
+    <Compile Include="DllUtils.cs" />
+    <Compile Include="DoublyLinkedList.cs" />
+    <Compile Include="DoublyLinkedNode.cs" />
+    <Compile Include="EActorSystemState.cs" />
+    <Compile Include="EAkMarkerCbActionType.cs" />
+    <Compile Include="EAkMarkerCbType.cs" />
+    <Compile Include="EApplicationLifetimeDelegate.cs" />
+    <Compile Include="EasingLibrary.cs" />
+    <Compile Include="EAxisType.cs" />
+    <Compile Include="EBpTypeName.cs" />
+    <Compile Include="EBpTypeNameExtensions.cs" />
+    <Compile Include="EBpTypeNameJsonConverter.cs" />
+    <Compile Include="ECallbackMask.cs" />
+    <Compile Include="EDllType.cs" />
+    <Compile Include="EEntityDisableKey.cs" />
+    <Compile Include="EEntityTypeQuery.cs" />
+    <Compile Include="EExecutedFlag.cs" />
+    <Compile Include="EffectEnvironment.cs" />
+    <Compile Include="EffectPerformanceRecords.cs" />
+    <Compile Include="EffectPerformanceStatistics.cs" />
+    <Compile Include="EGameBudgetMode.cs" />
+    <Compile Include="EHandleType.cs" />
+    <Compile Include="EHttpCode.cs" />
+    <Compile Include="EInputControllerMainType.cs" />
+    <Compile Include="EInputControllerType.cs" />
+    <Compile Include="EInterpCurveMode.cs" />
+    <Compile Include="ELanguageType.cs" />
+    <Compile Include="ELoadMode.cs" />
+    <Compile Include="ELoadModeReason.cs" />
+    <Compile Include="ELogLevel.cs" />
+    <Compile Include="ELogLevelExtensions.cs" />
+    <Compile Include="ELogLevelJsonConverter.cs" />
+    <Compile Include="ELogVerbosity.cs" />
+    <Compile Include="EMainGamePartitionObjectType.cs" />
+    <Compile Include="EMeasureMode.cs" />
+    <Compile Include="EMemoryTagDefine.cs" />
+    <Compile Include="Entity.cs" />
+    <Compile Include="EntityArgs.2.cs" />
+    <Compile Include="EntityArgs.3.cs" />
+    <Compile Include="EntityArgs.4.cs" />
+    <Compile Include="EntityArgs.5.cs" />
+    <Compile Include="EntityArgs.cs" />
+    <Compile Include="EntityComponent.cs" />
+    <Compile Include="EntityComponentConstant.cs" />
+    <Compile Include="EntityComponentSystem.cs" />
+    <Compile Include="EntityHelperConstants.cs" />
+    <Compile Include="EntitySystem.cs" />
+    <Compile Include="EntitySystemHelper.cs" />
+    <Compile Include="Entry.cs" />
+    <Compile Include="EOperationType.cs" />
+    <Compile Include="EPromiseState.cs" />
+    <Compile Include="ERandomReason.cs" />
+    <Compile Include="ESourcePlatformType.cs" />
+    <Compile Include="ESpeechType.cs" />
+    <Compile Include="EState.cs" />
+    <Compile Include="ETickProcessLifeType.cs" />
+    <Compile Include="ETypeLoadKind.cs" />
+    <Compile Include="Event.cs" />
+    <Compile Include="EventArgs.2.cs" />
+    <Compile Include="EventArgs.3.cs" />
+    <Compile Include="EventArgs.4.cs" />
+    <Compile Include="EventArgs.5.cs" />
+    <Compile Include="EventArgs.6.cs" />
+    <Compile Include="EventArgs.7.cs" />
+    <Compile Include="EventArgs.8.cs" />
+    <Compile Include="EventArgs.cs" />
+    <Compile Include="EventArgsUtils.cs" />
+    <Compile Include="EventConstant.cs" />
+    <Compile Include="EventHandleEntry.cs" />
+    <Compile Include="EventHandleListExtensions.cs" />
+    <Compile Include="ExecuteActionArgs.cs" />
+    <Compile Include="ExecutionQueue.cs" />
+    <Compile Include="ExternalSourcesPoolItem.cs" />
+    <Compile Include="FastUeFloatRange.cs" />
+    <Compile Include="FinalizationRegistry.cs" />
+    <Compile Include="Finalizer.cs" />
+    <Compile Include="FloatCurve.cs" />
+    <Compile Include="FNameUtil.cs" />
+    <Compile Include="GameBudgetAllocatorConfig.cs" />
+    <Compile Include="GameBudgetInterfaceController.cs" />
+    <Compile Include="GameBudgetModeBase.cs" />
+    <Compile Include="GameBudgetTimeEstimationFramesOffset.cs" />
+    <Compile Include="GameplayTagUtils.cs" />
+    <Compile Include="Generated\StaticVariableRegister\StaticVariableRegister.cs" />
+    <Compile Include="GenericEventHandler.cs" />
+    <Compile Include="GetPutRecord.cs" />
+    <Compile Include="Http.cs" />
+    <Compile Include="HttpResponseData.cs" />
+    <Compile Include="IClear.cs" />
+    <Compile Include="IComponentDependency.cs" />
+    <Compile Include="IConditionListener.cs" />
+    <Compile Include="IConfigQuery.cs" />
+    <Compile Include="ICurvePoint.cs" />
+    <Compile Include="IEntityArgs.cs" />
+    <Compile Include="IEntityComponentCleaner.cs" />
+    <Compile Include="IEventArgs.cs" />
+    <Compile Include="IFilterState.cs" />
+    <Compile Include="IGameBudgetManagedObject.cs" />
+    <Compile Include="IGameBudgetOnceTaskGroup.cs" />
+    <Compile Include="IGameBudgetTimeEstimation.cs" />
+    <Compile Include="ILoadModeHandler.cs" />
+    <Compile Include="ILogCaptureParam.cs" />
+    <Compile Include="ILogRecord.cs" />
+    <Compile Include="ImmutableArray.cs" />
+    <Compile Include="ImmutableMap.cs" />
+    <Compile Include="InfoDefine.cs" />
+    <Compile Include="InterpCurvePointNumber.cs" />
+    <Compile Include="InterpCurvePointQuat.cs" />
+    <Compile Include="InterpCurvePointVector.cs" />
+    <Compile Include="IPlane.cs" />
+    <Compile Include="IQueryLocalText.cs" />
+    <Compile Include="IQueryLocalTextNew.cs" />
+    <Compile Include="IRevocable.cs" />
+    <Compile Include="IRevocableObject.cs" />
+    <Compile Include="ITickable.cs" />
+    <Compile Include="KuroCollisionChannel.cs" />
+    <Compile Include="KuroGameBudgetAllocatorInterface.cs" />
+    <Compile Include="KuroJsStatsLibrary.cs" />
+    <Compile Include="KuroObjectTypeQuery.cs" />
+    <Compile Include="KuroStringBuilder.cs" />
+    <Compile Include="KuroTraceTypeQuery.cs" />
+    <Compile Include="LanguageDefine.cs" />
+    <Compile Include="LanguageSystem.cs" />
+    <Compile Include="LinearCurve.cs" />
+    <Compile Include="LinkedList.cs" />
+    <Compile Include="LinkedNode.cs" />
+    <Compile Include="LoadModeHandlerInGame.cs" />
+    <Compile Include="LoadModeHandlerInGameLoading.cs" />
+    <Compile Include="LoadModeHandlerLoading.cs" />
+    <Compile Include="LoadModeHandlerNone.cs" />
+    <Compile Include="LoadModeManager.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="LogAnalyzer.cs" />
+    <Compile Include="LogCaptureController.cs" />
+    <Compile Include="LogJsonRawAttribute.cs" />
+    <Compile Include="LogJsonSerializableAttribute.cs" />
+    <Compile Include="LogoDefine.cs" />
+    <Compile Include="LogProfiler.cs" />
+    <Compile Include="LogRecord.cs" />
+    <Compile Include="LogRecordJsonWriter.cs" />
+    <Compile Include="LogReportRecord.cs" />
+    <Compile Include="Lru.cs" />
+    <Compile Include="LruConstants.cs" />
+    <Compile Include="LruNode.cs" />
+    <Compile Include="Macro.cs" />
+    <Compile Include="MapUtils.cs" />
+    <Compile Include="MathCommon.cs" />
+    <Compile Include="MathUtils.cs" />
+    <Compile Include="ModelAttribute.cs" />
+    <Compile Include="ModelBase.cs" />
+    <Compile Include="Net.cs" />
+    <Compile Include="NetInfo.cs" />
+    <Compile Include="Number.cs" />
+    <Compile Include="NumberConverter.cs" />
+    <Compile Include="NumberEvent.cs" />
+    <Compile Include="ObjectBase.cs" />
+    <Compile Include="ObjectPool.cs" />
+    <Compile Include="ObjectSystem.cs" />
+    <Compile Include="ObjectUtils.cs" />
+    <Compile Include="PendingActor.cs" />
+    <Compile Include="PerformanceController.cs" />
+    <Compile Include="PerfSight.cs" />
+    <Compile Include="PlayResult.cs" />
+    <Compile Include="Pool.cs" />
+    <Compile Include="PostEventArgs.cs" />
+    <Compile Include="PowerCurve.cs" />
+    <Compile Include="PowerCurve2.cs" />
+    <Compile Include="PowerCurve3.cs" />
+    <Compile Include="PriorityQueue.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProxyLru.cs" />
+    <Compile Include="ProxyLruConstants.cs" />
+    <Compile Include="ProxyLruMap.cs" />
+    <Compile Include="Quat.cs" />
+    <Compile Include="Queue.cs" />
+    <Compile Include="RandomSystem.cs" />
+    <Compile Include="RbNode.cs" />
+    <Compile Include="RbTree.cs" />
+    <Compile Include="ResourceSystem.cs" />
+    <Compile Include="RichCurveKeyHandle.cs" />
+    <Compile Include="Rotator.cs" />
+    <Compile Include="SeekOnEventArgs.cs" />
+    <Compile Include="SetRtpcValueArgs.cs" />
+    <Compile Include="SetUtility.cs" />
+    <Compile Include="SplineCurve.cs" />
+    <Compile Include="SquaredCurve.cs" />
+    <Compile Include="Stack.cs" />
+    <Compile Include="Stat.cs" />
+    <Compile Include="StateBase.cs" />
+    <Compile Include="StateMachine.cs" />
+    <Compile Include="StateRef.cs" />
+    <Compile Include="StatSecondsAccumulator.cs" />
+    <Compile Include="StringUtils.cs" />
+    <Compile Include="SwitchRef.cs" />
+    <Compile Include="TAsyncTraceDelegate.cs" />
+    <Compile Include="TCheck.cs" />
+    <Compile Include="TClearFunction.cs" />
+    <Compile Include="TEntityDestroyHandle.cs" />
+    <Compile Include="TickComponentInfo.cs" />
+    <Compile Include="TickComponentManager.cs" />
+    <Compile Include="TickEntityGroup.cs" />
+    <Compile Include="TickEntityManager.cs" />
+    <Compile Include="Ticker.cs" />
+    <Compile Include="TickIntervalConfig.cs" />
+    <Compile Include="TickIntervalUtils.cs" />
+    <Compile Include="TickProcess.cs" />
+    <Compile Include="TickProcessSystem.cs" />
+    <Compile Include="TickSystem.cs" />
+    <Compile Include="Time.cs" />
+    <Compile Include="TimeLimit.cs" />
+    <Compile Include="Timer.cs" />
+    <Compile Include="TimerHandle.cs" />
+    <Compile Include="TimerSystem.cs" />
+    <Compile Include="TimerSystemInstance.cs" />
+    <Compile Include="TLogCaptureCallback.cs" />
+    <Compile Include="TraceElementCommon.cs" />
+    <Compile Include="TraceHandle.cs" />
+    <Compile Include="Transform.cs" />
+    <Compile Include="Tree.cs" />
+    <Compile Include="TrimLru.cs" />
+    <Compile Include="TrimLruNode.cs" />
+    <Compile Include="TsFloatRange.cs" />
+    <Compile Include="TsGameBudgetAllocatorTickIntervalDetailConfig.cs" />
+    <Compile Include="TsGameBudgetGroupConfig.cs" />
+    <Compile Include="TsGameBudgetGroupConfigCache.cs" />
+    <Compile Include="TTimerAction.cs" />
+    <Compile Include="UiTextTranslationUtils.cs" />
+    <Compile Include="UnrealEngine\ActorExtensions.cs" />
+    <Compile Include="UnrealEngine\GameplayTagCache.cs" />
+    <Compile Include="UnrealEngine\GameplayTagExtensions.cs" />
+    <Compile Include="Vector.cs" />
+    <Compile Include="Vector2D.cs" />
+    <Compile Include="WeakMap.cs" />
+    <Compile Include="WeakSet.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Aki.Common\Aki.Common.csproj">
+      <Project>{37600991-511A-49CC-9A91-B04AB32BBB5C}</Project>
+      <Name>Aki.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Aki.Generated\Aki.Generated.csproj">
+      <Project>{37600991-511A-49CC-9A91-B04AB32BBB5E}</Project>
+      <Name>Aki.Generated</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Aki.Launcher\Aki.Launcher.csproj">
+      <Project>{37600991-511A-49CC-9A91-B04AB32BBB5F}</Project>
+      <Name>Aki.Launcher</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Aki.Protocol\Aki.Protocol.csproj">
+      <Project>{37600991-511A-49CC-9A91-B04AB32BBB60}</Project>
+      <Name>Aki.Protocol</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Aki.TdInterface\Aki.TdInterface.csproj">
+      <Project>{37600991-511A-49CC-9A91-B04AB32BBB61}</Project>
+      <Name>Aki.TdInterface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

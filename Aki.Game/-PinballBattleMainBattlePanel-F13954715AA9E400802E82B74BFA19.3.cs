@@ -1,0 +1,8 @@
+﻿using System;
+
+// Token: 0x02001CEF RID: 7407
+internal enum <PinballBattleMainBattlePanel>F13954715AA9E400802E82B74BFA19540AB238E6555C9E1ECFC5E2AF3E01CA6FF__EStarItem
+{
+	// Token: 0x04006780 RID: 26496
+	Star
+}

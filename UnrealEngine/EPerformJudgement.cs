@@ -1,0 +1,47 @@
+﻿using System;
+using UnrealEngine.Service;
+using UnrealEngine.Service.Flags;
+
+namespace UnrealEngine
+{
+	// Token: 0x02002264 RID: 8804
+	[UEnum(EEnumFlags.None)]
+	[UnrealObjectPath("/Script/MagtModule.EPerformJudgement")]
+	public enum EPerformJudgement : byte
+	{
+		// Token: 0x04011DA9 RID: 73129
+		EPJ_KEEP,
+		// Token: 0x04011DAA RID: 73130
+		EPJ_CPU_BOUND,
+		// Token: 0x04011DAB RID: 73131
+		EPJ_GPU_BOUND,
+		// Token: 0x04011DAC RID: 73132
+		EPJ_CPU_GPU_BOUND,
+		// Token: 0x04011DAD RID: 73133
+		EPJ_UPGRADE,
+		// Token: 0x04011DAE RID: 73134
+		EPJ_DOWNGRADE,
+		// Token: 0x04011DAF RID: 73135
+		EPJ_CPU_HIGH_LOADING,
+		// Token: 0x04011DB0 RID: 73136
+		EPJ_GPU_HIGH_LOADING,
+		// Token: 0x04011DB1 RID: 73137
+		EPJ_THERMAL_NORMAL,
+		// Token: 0x04011DB2 RID: 73138
+		EPJ_THERMAL_LIGHT,
+		// Token: 0x04011DB3 RID: 73139
+		EPJ_THERMAL_LIGHT_POWER_HIGH,
+		// Token: 0x04011DB4 RID: 73140
+		EPJ_THERMAL_MODERATE,
+		// Token: 0x04011DB5 RID: 73141
+		EPJ_THERMAL_MODERATE_POWER_HIGH,
+		// Token: 0x04011DB6 RID: 73142
+		EPJ_THERMAL_SEVERE,
+		// Token: 0x04011DB7 RID: 73143
+		EPJ_THERMAL_SEVERE_POWER_HIGH,
+		// Token: 0x04011DB8 RID: 73144
+		EPJ_THERMAL_CRITICAL,
+		// Token: 0x04011DB9 RID: 73145
+		EPJ_MAX
+	}
+}

@@ -1,0 +1,14 @@
+﻿using System;
+
+// Token: 0x02001CE4 RID: 7396
+internal enum <PinballBattleBarItem>F195CAC7FE64EA57E9891400D21DD28884F8ECE912DDA9DA3BBC0DF26CDCD47EC__EComp
+{
+	// Token: 0x0400672E RID: 26414
+	Level0,
+	// Token: 0x0400672F RID: 26415
+	Level1,
+	// Token: 0x04006730 RID: 26416
+	Level2,
+	// Token: 0x04006731 RID: 26417
+	Level3
+}

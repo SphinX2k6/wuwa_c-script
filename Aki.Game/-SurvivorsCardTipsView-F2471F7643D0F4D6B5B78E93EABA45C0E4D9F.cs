@@ -1,0 +1,10 @@
+﻿using System;
+
+// Token: 0x02002B38 RID: 11064
+internal enum <SurvivorsCardTipsView>F2471F7643D0F4D6B5B78E93EABA45C0E4D9F3A600248FAF4A69862250AB677D7__ECompSurvivorsCardTips
+{
+	// Token: 0x0400AAFD RID: 43773
+	BtnClose,
+	// Token: 0x0400AAFE RID: 43774
+	CardItem
+}

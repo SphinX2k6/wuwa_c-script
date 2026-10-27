@@ -1,0 +1,10 @@
+﻿using System;
+
+// Token: 0x02001D08 RID: 7432
+internal enum <PinballBattleRoleSkillReleaseTips>F87F260B7135B14F41DF88ABE43CB4EC690FB5FFE226BB3D89A8732DC22BFEA41__ESkillItemComp
+{
+	// Token: 0x040067C3 RID: 26563
+	Role,
+	// Token: 0x040067C4 RID: 26564
+	Desc
+}

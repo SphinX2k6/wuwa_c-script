@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{37600991-511A-49CC-9A91-B04AB32BBB5C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aki.Common</RootNamespace>
+    <AssemblyName>Aki.Common</AssemblyName>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Google.FlatBuffers">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\Google.FlatBuffers.dll</HintPath>
+    </Reference>
+    <Reference Include="Sharphereal.Core">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\Sharphereal.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\System.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\UniTask.dll</HintPath>
+    </Reference>
+    <Reference Include="UnrealEngine">
+      <HintPath>G:\SteamLibrary\steamapps\common\Wuthering Waves\Client\Binaries\Win64\CSharpDump\Assemblies\UnrealEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="-Module-.cs" />
+    <Compile Include="Aki\Common\Common\ILogFormattedPrint.cs" />
+    <Compile Include="Aki\Common\ConsoleManagerGenerate\ConsoleRegister.cs" />
+    <Compile Include="Aki\Common\JitProfile.cs" />
+    <Compile Include="Aki\Common\Proxy\ConfigCommon.cs" />
+    <Compile Include="Aki\Common\Proxy\ConfigCommonParamLang.cs" />
+    <Compile Include="Aki\Common\Proxy\DeserializeConfig.cs" />
+    <Compile Include="Aki\Common\Proxy\IDeserializeConfigProxy.cs" />
+    <Compile Include="Aki\Common\Proxy\ILanguageSystemProxy.cs" />
+    <Compile Include="Aki\Common\Proxy\ILog.cs" />
+    <Compile Include="Aki\Common\Proxy\IStat.cs" />
+    <Compile Include="Aki\Common\Proxy\LanguageSystem.cs" />
+    <Compile Include="Aki\Common\Proxy\Log.cs" />
+    <Compile Include="Aki\Common\Proxy\Stat.cs" />
+    <Compile Include="Aki\Common\Proxy\StaticVariableRegister.cs" />
+    <Compile Include="Aki\Config\ConfigLogList.cs" />
+    <Compile Include="Aki\Config\DeserializeConfigResult.cs" />
+    <Compile Include="Aki\Define\Serialize\JsonConverterUtil.cs" />
+    <Compile Include="CommonDefine.cs" />
+    <Compile Include="CSharpScript\Core\Common\DecoratorDefineAttribute.cs" />
+    <Compile Include="CSharpScript\Core\Common\DecoratorImplementAttribute.cs" />
+    <Compile Include="CSharpScript\Core\Common\GeneratePropertyAccessMethodAttribute.cs" />
+    <Compile Include="CSharpScript\Core\Common\StringBuilderExtension.cs" />
+    <Compile Include="CSharpScript\Core\Extension\Comparer.cs" />
+    <Compile Include="CSharpScript\Core\Extension\DelegateExtensions.cs" />
+    <Compile Include="CSharpScript\Core\Extension\DictionaryExtension.cs" />
+    <Compile Include="CSharpScript\Core\Extension\UniTaskExtension.cs" />
+    <Compile Include="ELogAuthor.cs" />
+    <Compile Include="ELogModule.cs" />
+    <Compile Include="ELogModuleExtensions.cs" />
+    <Compile Include="ELogModuleJsonConverter.cs" />
+    <Compile Include="IConfigQuery.cs" />
+    <Compile Include="IOneOfObject.cs" />
+    <Compile Include="IQueryLocalText.cs" />
+    <Compile Include="IQueryLocalTextNew.cs" />
+    <Compile Include="LogDefine.cs" />
+    <Compile Include="LogList.cs" />
+    <Compile Include="OneOf.2.cs" />
+    <Compile Include="OneOf.3.cs" />
+    <Compile Include="OneOf.4.cs" />
+    <Compile Include="OneOf.cs" />
+    <Compile Include="OneOfJsonConvertor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Aki.Launcher\Aki.Launcher.csproj">
+      <Project>{37600991-511A-49CC-9A91-B04AB32BBB5F}</Project>
+      <Name>Aki.Launcher</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

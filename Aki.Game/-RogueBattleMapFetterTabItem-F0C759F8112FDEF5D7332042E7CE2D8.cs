@@ -1,0 +1,12 @@
+﻿using System;
+
+// Token: 0x0200276D RID: 10093
+internal enum <RogueBattleMapFetterTabItem>F0C759F8112FDEF5D7332042E7CE2D8F62E68730DA6C8B1D63EC6453A6DB7D0F3__EChildComponentDefine
+{
+	// Token: 0x04009B94 RID: 39828
+	Toggle,
+	// Token: 0x04009B95 RID: 39829
+	Txt1,
+	// Token: 0x04009B96 RID: 39830
+	Txt2
+}

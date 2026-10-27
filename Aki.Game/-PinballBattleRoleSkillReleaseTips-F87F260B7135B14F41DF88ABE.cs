@@ -1,0 +1,10 @@
+﻿using System;
+
+// Token: 0x02001D06 RID: 7430
+internal enum <PinballBattleRoleSkillReleaseTips>F87F260B7135B14F41DF88ABE43CB4EC690FB5FFE226BB3D89A8732DC22BFEA41__EComp
+{
+	// Token: 0x040067BE RID: 26558
+	Layout,
+	// Token: 0x040067BF RID: 26559
+	SkillItem
+}

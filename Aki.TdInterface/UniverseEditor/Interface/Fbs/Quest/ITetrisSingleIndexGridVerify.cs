@@ -1,0 +1,37 @@
+﻿using System;
+using System.Runtime.CompilerServices;
+using Google.FlatBuffers;
+
+namespace Aki.UniverseEditor.Interface.Fbs.Quest
+{
+	// Token: 0x020041D4 RID: 16852
+	public static class ITetrisSingleIndexGridVerify
+	{
+		// Token: 0x06018D37 RID: 101687 RVA: 0x00392664 File Offset: 0x00390864
+		public static bool Verify(Verifier verifier, uint tablePos)
+		{
+			if (verifier.VerifyTableStart(tablePos) && verifier.VerifyField(tablePos, 4, 4UL, 4UL, false))
+			{
+				short offsetId = 6;
+				VerifyTableAction verifyAction;
+				if ((verifyAction = ITetrisSingleIndexGridVerify.<>O.<0>__Verify) == null)
+				{
+					verifyAction = (ITetrisSingleIndexGridVerify.<>O.<0>__Verify = new VerifyTableAction(ITetrisSingleGridVerify.Verify));
+				}
+				if (verifier.VerifyTable(tablePos, offsetId, verifyAction, false))
+				{
+					return verifier.VerifyTableEnd(tablePos);
+				}
+			}
+			return false;
+		}
+
+		// Token: 0x02007967 RID: 31079
+		[CompilerGenerated]
+		private static class <>O
+		{
+			// Token: 0x040132C7 RID: 78535
+			public static VerifyTableAction <0>__Verify;
+		}
+	}
+}

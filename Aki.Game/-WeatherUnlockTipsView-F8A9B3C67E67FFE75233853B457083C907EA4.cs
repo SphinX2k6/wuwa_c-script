@@ -1,0 +1,14 @@
+﻿using System;
+
+// Token: 0x02002D26 RID: 11558
+internal enum <WeatherUnlockTipsView>F8A9B3C67E67FFE75233853B457083C907EA4122F9402B1B9CC574A216FE12BF9__EComp
+{
+	// Token: 0x0400B47E RID: 46206
+	TopDesc,
+	// Token: 0x0400B47F RID: 46207
+	CenterDesc,
+	// Token: 0x0400B480 RID: 46208
+	BottomDesc,
+	// Token: 0x0400B481 RID: 46209
+	ExitBtn
+}
